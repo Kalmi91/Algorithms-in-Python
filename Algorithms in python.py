@@ -42,24 +42,22 @@ def permute(string, pocket=''):
 print(permute('Ab', ''))
 # This is more steps
 
-################ Something somewhere is wrong, but I can't see ################
+################ I did it :) ################
+
 def permutations(str):
     for p in range(factorial(len(str))):
-        #print(str)
         print(''.join(str))
         i = len(str) - 1
-        #print(i)
         while i > 0 and str[i - 1] > str[i]:
-            #print(i)
             i -= 1
-            str[i:] = reversed(str[i:])
-            if i > 0:
-                q = i
-                while str[i - 1] > str[q]:
-                    q += 1
-                temp = str[i - 1]
-                str[i - 1] = str[q]
-                str[q] = temp
+        str[i:] = reversed(str[i:])
+        if i > 0:
+            q = i
+            while str[i - 1] > str[q]:
+                q += 1
+            temp = str[i - 1]
+            str[i - 1] = str[q]
+            str[q] = temp
 s = 'abc'
 s = list(s)
 permutations(s)
