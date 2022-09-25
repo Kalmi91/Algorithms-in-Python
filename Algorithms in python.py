@@ -27,6 +27,7 @@ def recur_factorial1(n):
     else: return n * recur_factorial1(n - 1)
 print(recur_factorial1(5))
 
+################ Recursive Vs Iterative ################
 ################ Recursive Function Swap 2 letters ################
 
 def permute(string, pocket=''):
@@ -39,10 +40,10 @@ def permute(string, pocket=''):
             back = string[i+1:]
             together = front + back
             permute(together, letter + pocket)
-print(permute('Ab', ''))
+print(permute('ABC', ''))
 # This is more steps
 
-################ I did it :) ################
+################ Iterative ################
 
 def permutations(str):
     for p in range(factorial(len(str))):
@@ -62,3 +63,16 @@ s = 'abc'
 s = list(s)
 permutations(s)
 # This is less steps
+
+
+
+################ 8 Queens Problem ################
+# test
+def test(intizsor):
+    masikint = 1
+    for i in range(intizsor):
+        print(masikint)
+        masikint = masikint * (i + 1)
+    return masikint
+
+test(5)
